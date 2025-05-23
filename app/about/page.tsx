@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <HeroImage title="Handmade With Love"/>
-    <div className="flex flex-col items-center justify-center h-screen text-white p-4">  
+    <div className="flex flex-col items-center pt-10 h-screen text-white p-4">  
         <h1 className="pb-2 items-start text-2xl">About <span className="satisfy text-3xl font-bold ">The Silk Lady</span></h1>
         <div className="space-y-4">
             <p>Providing heartfelt remembrance through Silk Tombstone Saddles, Tombstone Cones, Seasonal Tombstone Arrangements, and Custom Orders—crafted with care here in the Ottawa Valley.

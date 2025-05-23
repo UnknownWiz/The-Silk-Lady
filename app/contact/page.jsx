@@ -10,7 +10,7 @@ export default function Contact() {
         <h1 className="text-center p-4 text-3xl">Contact By</h1>
         <div className="flex sm:flex-row flex-col items-center justify-center gap-2 text-center">
           <div>
-            <h1 className="text-xl p-2">Phone</h1>
+            <h1 className="text-xl p-2 satisfy">Phone</h1>
             <a
               href="tel:613-735-2825"
               className="border-2 text-white pl-2 pr-2 pt-1 pb-1 block hover:underline"
@@ -19,7 +19,7 @@ export default function Contact() {
             </a>
           </div>
           <div>
-            <h1 className="text-xl p-2">Email</h1>
+            <h1 className="text-xl p-2 satisfy">Email</h1>
             <a
               href="mailto:silklady@cogeco.ca"
               className="border-2 text-white pl-2 pr-2 pt-1 pb-1 block hover:underline"
