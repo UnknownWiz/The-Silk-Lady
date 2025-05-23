@@ -7,25 +7,10 @@ export default function Contact() {
         subtext="The Silk Lady"
       />
       <div className="text-white">
-        <h1 className="text-center p-4 text-3xl">Contact By</h1>
+        <h1 className="text-center p-4 text-4xl satisfy">Contact Us</h1>
         <div className="flex sm:flex-row flex-col items-center justify-center gap-2 text-center">
           <div>
-            <h1 className="text-xl p-2 satisfy">Phone</h1>
-            <a
-              href="tel:613-735-2825"
-              className="border-2 text-white pl-2 pr-2 pt-1 pb-1 block hover:underline"
-            >
-              613-735-2825
-            </a>
-          </div>
-          <div>
-            <h1 className="text-xl p-2 satisfy">Email</h1>
-            <a
-              href="mailto:silklady@cogeco.ca"
-              className="border-2 text-white pl-2 pr-2 pt-1 pb-1 block hover:underline"
-            >
-              silklady@cogeco.ca
-            </a>
+            <p>For any inquiries, please feel free to reach out to The Silk Lady by phone or email. Whether you have questions, requests, or simply wish to connect, we're here to assist you.</p>
           </div>
         </div>
       </div>

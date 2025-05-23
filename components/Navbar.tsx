@@ -1,24 +1,38 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav>
-      <div className="fixed flex flex-row flex-nowrap p-3 text-white top-1 left-1 w-full h-auto z-50 items-center ">
-        
-        <Link href="/" className="flex flex-nowrap align-middle items-center"><h1 className="satisfy text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-          The Silk Lady
-        </h1>
-        <Image
-          src="/TheSilkLadyLogoIcon.png"
-          width={25}
-          height={25}
-          alt="A Pansy Flower"
-          className="w-5 h-5 sm:w-5 sm:h-5 md:w-7 md:h-7 lg:w-8 lg:h-8"
-        />
+      <div
+        className={`fixed flex flex-row flex-nowrap p-3 text-white top-1 left-1 w-full h-auto z-50 items-center transition-colors duration-300
+          ${scrolled ? "bg-peach-brand/80 backdrop-blur-md" : ""}
+        `}
+      >
+        <Link href="/" className="flex flex-nowrap align-middle items-center">
+          <h1 className="satisfy text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+            The Silk Lady
+          </h1>
+          <Image
+            src="/TheSilkLadyLogoIcon.png"
+            width={25}
+            height={25}
+            alt="A Pansy Flower"
+            className="w-5 h-5 sm:w-5 sm:h-5 md:w-7 md:h-7 lg:w-8 lg:h-8"
+          />
         </Link>
         {/* Menu Button */}
         <button
